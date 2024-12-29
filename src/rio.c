@@ -29,7 +29,7 @@ ssize_t rio_writen(int fd, void *usrbuf, size_t size)
     char *bufp = usrbuf;
     while (left > 0)
     {
-        if ((written = write(fd, bufp, left) < 0))
+        if ((written = write(fd, bufp, left)) <= 0)
         {
             if (errno == EINTR)
                 written = 0;
