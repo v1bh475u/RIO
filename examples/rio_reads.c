@@ -20,7 +20,7 @@ int main()
     rio_readinitb(&rio, fd);
     while (rio_readnb(&rio, &c, 1) == 1)
     {
-        write(STDOUT_FILENO, &c, 1);
+        rio_writen(STDOUT_FILENO, &c, 1);
     }
     end = clock();
     cpu_time_used = ((double)(end - start)) / CLOCKS_PER_SEC;
