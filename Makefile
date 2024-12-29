@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -Wall -Wextra -O2 -fPIC
+CFLAGS = -Wall -Wextra -fPIC
 AR = ar
 ARFLAGS = rcs
 PREFIX = /usr/local
