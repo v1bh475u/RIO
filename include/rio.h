@@ -27,5 +27,3 @@ void rio_readinitb(rio_t *rp, int fd);
 // If a line is longer than maxlen, it is truncanted and read
 ssize_t rio_readlineb(rio_t *rp, void *usrbuf, size_t maxlen);
 ssize_t rio_readnb(rio_t *rp, void *usrbuf, size_t size);
-// rio_readlineb and rio_readnb internally use rio_read
-static ssize_t rio_read(rio_t *rp, char *usrbuf, size_t size);

@@ -49,6 +49,7 @@ void rio_readinitb(rio_t *rp, int fd)
     rp->rio_bufp = rp->rio_buf;
 }
 
+// rio_readlineb and rio_readnb internally use rio_read
 static ssize_t rio_read(rio_t *rp, char *usrbuf, size_t size)
 {
     ssize_t cnt;
